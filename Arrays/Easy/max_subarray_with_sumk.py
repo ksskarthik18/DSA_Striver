@@ -22,6 +22,8 @@ def longest_subarray_sumk(nums,k):
 def main():
     nums=[1,2,3,0,1,1,1,1,3,3]
     k=3
+    # nums = [1, -1, 5, -2, 3]
+    # k = 3
     print(longest_subarray_sumk(nums,k))
 
 main()
