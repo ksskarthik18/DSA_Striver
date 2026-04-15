@@ -1,9 +1,10 @@
+#Time Complexity : O(log n base 2)
 def binary_search(nums,target):
     n=len(nums)
     low=0
     high=n-1
     while low<=high:
-        mid=(low+high)//2
+        mid = low + ((high-low)//2)
         if nums[mid]==target:
             return mid
         elif nums[mid]>target:
