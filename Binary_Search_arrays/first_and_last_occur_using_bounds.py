@@ -1,3 +1,5 @@
+#Time Complexity : O (2log n base 2)
+
 def lower_bound(nums,target):
     n=len(nums)
     low=0

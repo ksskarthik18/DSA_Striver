@@ -1,3 +1,5 @@
+#Time Complexity : O(log n) + O(log n) = O(log n)
+
 def first(nums,target):
     n=len(nums)
     low=0
@@ -35,7 +37,10 @@ def main():
     nums = [5,7,7,8,8,10]
     target = 8
     fst=first(nums,target)
-    lst=last(nums,target)
-    print([fst,lst])
+    if fst == -1:
+        print([-1,-1])
+    else :
+        lst=last(nums,target)
+        print([fst,lst])
 main()
 
