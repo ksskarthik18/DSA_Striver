@@ -1,3 +1,4 @@
+#Time Complexity : O(log n)
 def find_peak_element(nums):
     n = len(nums)
     low = 1
