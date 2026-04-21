@@ -26,7 +26,7 @@ def upper_bound(nums,target):
             high = mid-1
         else:
             low = mid + 1
-    return result\
+    return result
     
 def first_and_last_occur(nums,target):
     n = len(nums)
