@@ -18,7 +18,7 @@ def canWePlaceCows(nums,dist,cows):
 def find_maxPos(nums,cows):
     n= len(nums)
     nums.sort()
-    low = 0
+    low = 1
     high = max(nums)-min(nums)
     ans=-1
     while low<=high:
