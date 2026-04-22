@@ -16,7 +16,7 @@ def find_pos(nums,pages,students):
 
 def allocate_books(nums,students):
     n = len(nums)
-    low = min(nums)
+    low = min(nums) # it can be max(nums) also
     high = sum(nums)
     while low <= high:
         mid = (low + high)//2
