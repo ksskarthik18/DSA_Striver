@@ -1,3 +1,4 @@
+#Time Complexity : O(n)
 def string_to_integer(s):
     n = len(s)
     i=0

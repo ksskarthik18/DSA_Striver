@@ -1,3 +1,4 @@
+#Time Complexity : O(n)
 def find_max_depth(s) :
     depth = 0
     max_depth=0
