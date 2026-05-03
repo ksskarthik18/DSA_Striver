@@ -121,7 +121,15 @@ class LinkedList:
             before = temp
             temp = after
         
-        
+    def search(self,value):
+        if self.length == 0:
+            return False
+        temp = self.head
+        while temp.next:
+            if temp.value == value:
+                return True
+            temp = temp.next
+        return False
 
 my_linked_list = LinkedList(4)
 
@@ -151,10 +159,17 @@ print('Reversing the entire list :')
 my_linked_list.reverse()
 my_linked_list.print_list()
 
+print('Search : ')
+print(my_linked_list.search(18))
+
+
+
+
 
 
 print("Pop :")
 print(my_linked_list.pop().value)
 print("Pop first :")
 print(my_linked_list.pop_first().value)
+
 
