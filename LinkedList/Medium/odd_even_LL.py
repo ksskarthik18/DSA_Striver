@@ -1,3 +1,5 @@
+#Time Complexity : O(n/2 **2) == O(n)
+
 class Node:
     def __init__(self, value):
         self.value = value
