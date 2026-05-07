@@ -16,7 +16,6 @@ class LinkedList:
         while temp is not None:
             print(temp.value)
             temp=temp.next
-
         
     def append(self, value):
         new_node = Node(value)
