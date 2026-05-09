@@ -31,8 +31,8 @@ class DoublyLinkedList:
         return True
     
     def reverse_btwn(self,start_index,end_index):
-        if self.head is None or self.head == self.tail:
-            return None
+        if self.head is None or start_index == end_index:
+            return self.head
         dummy1 = Node(0)
         dummy1.next = self.head
         self.head.prev = dummy1
