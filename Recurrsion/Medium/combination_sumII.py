@@ -2,8 +2,6 @@ def combination_sum2(arr,target):
     arr.sort()
     result =[]
     def backTrack(i,target,ds):
-        if i == len(arr):
-            return
         if target == 0:
             result.append(ds[:])
             return
