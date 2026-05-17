@@ -1,4 +1,4 @@
-
+#Time Complexity : 2**n + 2**n log(2**n)
 def sub_set_sum(nums):
     result = []
     def backTrack(index,current):
