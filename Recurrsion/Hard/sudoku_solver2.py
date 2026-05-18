@@ -1,0 +1,50 @@
+#Time Complexity :  O(9^m), m = number of empty cells
+
+def solveSudoku(board):
+    cols = [set() for _ in range(9)]
+    rows = [set() for _ in range(9)]
+    boxes = [set() for _ in range(9)]
+    empty=[]
+    for r in range(9):
+        for c in range(9):
+            if board[r][c] ==".":
+                empty.append((r,c))
+            else:
+                val = board[r][c]
+                rows[r].add(val)
+                cols[c].add(val)
+                box = 3*(r//3) + (c//3)
+                boxes[box].add(val)
+
+    def solve(index):
+        if index == len(empty):
+            return True
+        r,c = empty[index]
+
+        box = 3*(r//3) + (c//3)
+        for num in "123456789":
+            if num not in rows[r] and num not in cols[c] and num not in boxes[box]:
+                board[r][c] = num
+
+                rows[r].add(num)
+                cols[c].add(num)
+                boxes[box].add(num)
+
+                if solve(index+1):
+                    return True
+                
+                board[r][c] ="."
+                rows[r].remove(num)
+                cols[c].remove(num)
+                boxes[box].remove(num)
+
+        return False
+    
+    solve(0)
+
+def main():
+    board = [["5","3",".",".","7",".",".",".","."],["6",".",".","1","9","5",".",".","."],[".","9","8",".",".",".",".","6","."],["8",".",".",".","6",".",".",".","3"],["4",".",".","8",".","3",".",".","1"],["7",".",".",".","2",".",".",".","6"],[".","6",".",".",".",".","2","8","."],[".",".",".","4","1","9",".",".","5"],[".",".",".",".","8",".",".","7","9"]]
+    solveSudoku(board)
+    print(board)
+
+main()
