@@ -1,3 +1,4 @@
+#Time Complexity : O(2N)
 class Solution(object):
     def __init__(self):
         self.stack = []
@@ -18,28 +19,22 @@ class Solution(object):
     def empty(self):
         return len(self.stack) == 0
     
-    def nextGreaterElements(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: List[int]
-        """
+    def next_greater_element2(self,nums):
         n = len(nums)
-        nge=[-1]*n
-        for i in range(n-1,-1,-1):
-
-            while not (self.empty()) and self.top() <= nums[i]:
+        nge = [-1]*n
+        for i in range(2*n-1,-1,-1):
+            while (not self.empty()) and self.top() <= nums[i%n]:
                 self.pop()
-            if  self.empty():
-                nge[i]=-1
-            else:
-                nge[i] = self.top()
-            self.push(nums[i])
-
+            if i < n:
+                if self.empty():
+                    nge[i]=-1
+                else:
+                    nge[i] = self.top()
+            self.push(nums[i%n])
         return nge
-
-
 def main():
     nums=[1,2,1]
     s = Solution()
-    print(s.nextGreaterElements(nums))
-main()      
+    print(s.next_greater_element2(nums))
+main()  
+            
