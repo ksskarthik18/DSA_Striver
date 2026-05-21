@@ -1,3 +1,6 @@
+#Time Complexity : O(q x n)
+# q = len(indices)
+# n = len(arr)
 def greater_elements_right(arr,indices):
     n = len(arr)
     result=[]
