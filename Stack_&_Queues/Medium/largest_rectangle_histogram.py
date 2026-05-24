@@ -1,5 +1,5 @@
 #Time Complexity :O(N) 
-def largestRectangeHeights(heights):
+def largestRectangleHeights(heights):
     n = len(heights)
     stack = []
     maxArea = 0
@@ -26,5 +26,5 @@ def largestRectangeHeights(heights):
 
 def main():
     heights = [2,1,5,6,2,3]
-    print(largestRectangeHeights(heights))
+    print(largestRectangleHeights(heights))
 main()
